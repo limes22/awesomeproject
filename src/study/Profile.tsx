@@ -1,11 +1,14 @@
 import * as React from 'react';
 import {Counter} from "./Counter";
 import {useState} from "react";
+import internal from 'stream';
 
 // props 받아올 값의 type 을 선언
 interface Iprops {
     name: string,
-    job: string,
+    gender: string,
+    email: string,
+    phone: string,
 }
 
 // props type 설정
@@ -18,7 +21,13 @@ export const Profile = (props: Iprops) => {
                     <b>이름 : { props.name }</b>
                 </div>
                 <div>
-                    <b>직업 : { props.job }</b>
+                    <b>성별 : { props.gender }</b>
+                </div>
+                <div>
+                    <b>이메일 : { props.email }</b>
+                </div>
+                <div>
+                    <b>전화번호 : { props.phone }</b>
                 </div>
             </div>
         </>
