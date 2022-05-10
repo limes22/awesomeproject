@@ -6,7 +6,7 @@ import internal from 'stream';
 // props 받아올 값의 type 을 선언
 interface Iprops {
     name: string,
-    gender: string,
+    // gender: string,
     email: string,
     phone: string,
     id?: string,
@@ -26,12 +26,28 @@ interface Iprops {
 export const Profile = (props: Iprops) => {
     // const { name, gender, email, phone, id } = props;
     // 비구조 할당 문법 => 오브젝트가 있다면, 해당 Key값들을 다음과 같이 추출할수 있습니다. reference: https://learnjs.vlpt.us/useful/06-destructuring.html
-    const { name, gender, email, phone } = props;
+    const { name, email, phone } = props;
     // const name = props.name;
     // const gender = props.gender;
     // const email = props.email;
     // const phone = props.phone;
     // const value = undefined;
+
+    const [gender, setGender] = useState('male');
+
+    const onChangeGender = () => {
+        // setState({
+        //     counter: state.counter+1
+        // })
+        console.log(gender);
+        if (gender === 'male') {
+            setGender('female');
+        } 
+        if (gender === 'female') {
+            setGender('male');
+        }
+    }
+
     return(
         <>
             <div>
@@ -47,6 +63,9 @@ export const Profile = (props: Iprops) => {
                 </div>
                 <div>
                     <b>전화번호 : { phone }</b>
+                </div>
+                <div>
+                    <button onClick={onChangeGender}>성별change</button>
                 </div>
                 {/*{id ? (*/}
                 {/*    <div>*/}
