@@ -8,8 +8,8 @@ const App = () => {
   return (
       <div className='App'>
         <Profile name='myName' gender='female' email='howdi2002@naver.com' phone='01012345678' />
-          <Counter />
-          <TodoList />
+        <Counter />
+        <TodoList />
       </div>
   );
 };
