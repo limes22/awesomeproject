@@ -13,7 +13,7 @@ export const Counter = (props: Iprops) => {
     //1. 상태 변수를 할당하는 리액트훅이다.
     //상태 변수는 업데이트가 일어나면 반드시 렌더링이 일어난다.
     //2. useState 는 배열 형태로 선언이 되는데 첫번째 인자가 상태 변수, 두번째가 상태 변수를
-    //갱신하는 함수 useState 파라미터는 상태 변수를 초기화 하는 값
+    //갱신하는 함수 useState 파라미터는 상태 변수를 초기화 하는 값.
     //상태 변수 초기화는 최초 컴포넌트가 마운트 될 때만 이루어진다.
     const [state, setState] = useState(inputValue);
     // const {myNumber: temp} = props; 구조분해를 사용하는 이유 props에 정의 되어 있지 않은 값이 들어왔을때 예외처리가 손쉽다.
