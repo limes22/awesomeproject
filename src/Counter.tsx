@@ -38,7 +38,7 @@ export const Counter = (props: Iprops) => {
     return (
         <>
             <div className='Counter'>
-                <h2> 카운터1 </h2>
+                <h2> 카운터 </h2>
                 <div>
                     {state}
                 </div>
