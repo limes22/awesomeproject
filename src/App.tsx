@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Asy from "./Asy";
 import Counter from "./Counter";
 
 const App: React.FC = () => {
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <input type="text" onChange={myOnChange} />
       {isshow ? <Counter counterValue={result} /> : null}
       <button onClick={myOnClick}>on/off</button>
+      <Asy />
     </>
   );
 };
