@@ -27,6 +27,7 @@ const Asy = () => {
   //     setDay(tmp);
   //   });
   // };
+  console.log('iam asy component')
 
 
 
